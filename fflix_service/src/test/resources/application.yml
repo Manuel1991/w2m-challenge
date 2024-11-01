@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: fflix-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:mem:fflix
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  liquibase:
+    enabled: false
+
+okta:
+  oauth2:
+    issuer: https://dev-q882ymdxpejid746.us.auth0.com/
+    audience: https://w2n-challenge-api.com

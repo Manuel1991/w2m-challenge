@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: logger-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:mem:logger
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: guest
+    password: guest
+    template:
+      exchange: spaceship-exchange
+      default-receive-queue: queue-info
